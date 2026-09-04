@@ -1,0 +1,51 @@
+{
+  "target": "range_km",
+  "excluded_final_features": [
+    "efficiency_wh_per_km",
+    "source_url",
+    "model",
+    "battery_type"
+  ],
+  "engineered_features": [
+    "footprint_m2",
+    "volume_proxy_m3",
+    "battery_per_torque",
+    "battery_per_footprint",
+    "performance_index"
+  ],
+  "holdout_split": "80/20",
+  "random_state": 42,
+  "model_comparison": [
+    {
+      "Model": "CatBoost (Final)",
+      "MAE (km)": 11.774537606396104,
+      "RMSE (km)": 15.104145837065973,
+      "R\u00b2": 0.9784407110120008
+    },
+    {
+      "Model": "Ridge Regression",
+      "MAE (km)": 15.218432691565548,
+      "RMSE (km)": 18.5255751472171,
+      "R\u00b2": 0.9675671216226546
+    },
+    {
+      "Model": "Random Forest",
+      "MAE (km)": 14.140808407738087,
+      "RMSE (km)": 19.104745152459383,
+      "R\u00b2": 0.9655075065074952
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE (km)": 16.144273195784454,
+      "RMSE (km)": 20.68834154718198,
+      "R\u00b2": 0.9595523356535139
+    }
+  ],
+  "selected_model": "CatBoostRegressor",
+  "cv_mean": {
+    "Fold": 3.0,
+    "MAE (km)": 12.994607240168941,
+    "RMSE (km)": 18.24419480503096,
+    "R\u00b2": 0.9678954337021146
+  }
+}

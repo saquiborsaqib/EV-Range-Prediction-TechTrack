@@ -4,6 +4,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from src.pipeline import EVFeatureEngineer, build_model
+from ev_pipeline import EVRangePipeline
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "EvRangePredictionDataset.xlsx"
